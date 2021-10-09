@@ -36,7 +36,7 @@ public abstract class ChildController<T extends ViewGroup> extends ViewControlle
     public T getView() {
         if (view == null) {
             super.getView();
-            view.setFitsSystemWindows(true);
+            view.setFitsSystemWindows(false);
             ViewCompat.setOnApplyWindowInsetsListener(view, this::onApplyWindowInsets);
         }
         return view;
